@@ -147,3 +147,161 @@ public class AssignOperEx {
 	}
 }
 
+package p126;
+
+public class ConditionalOperEx {
+	public static void main(String ar[]) {
+		int score=85;
+		char grade=(score>90) ? 'A':(score>80) ? 'B':'C';
+		System.out.println(score + "점은 " + grade + "등급입니다.");
+	}
+}
+
+package p136;
+
+public class IfEx {
+	public static void main(String ar[]) {
+		int score = 93;
+		
+		if(score>=90) {
+			System.out.println("점수는 90보다 크고 A등급 입니다.");
+		}else if(score>=80){
+			System.out.println("점수는 80보다 작고 B등급 입니다");
+		}else if(score>=70){
+			System.out.println("점수는 70보다 작고 C등급 입니다");
+		}else if(score>=60){
+			System.out.println("점수는 60보다 작고 D등급 입니다");
+		}else{
+			System.out.println("점수는 50보다 작고 F등급 입니다");
+		}	
+//		if(score<90) {
+//			System.out.println("점수는 90보다 작고 B등급 입니다.");
+//		}
+	}
+}
+
+package p140;
+
+public class IfDiceEx {
+	public static void main(String ar[]) {
+		int num = (int)(Math.random()*45)+1; //0.0~0.9 
+		//Math.random class는 크기를 가늠할수 없을 정도이기 떄문에 정수보다 크다
+		//double num = (double)Math.random();
+		System.out.println("난수발생 : " + num);
+	}
+}
+
+package p142;
+
+public class SwitchEx {
+	public static void main(String ar[]) {
+		int num = (int)(Math.random()*6) + 1;
+		
+		switch(num ) {
+		case 1:System.out.println("1번");break;
+		case 2:System.out.println("2번");break;
+		case 3:System.out.println("3번");break;
+		case 4:System.out.println("4번");break;
+		case 5:System.out.println("5번");break;
+		default:System.out.println("6번");break;
+		}
+	}
+}
+
+package p148;
+
+public class ForPrintEx {
+	public static void main(String ar[]) {
+	
+		int sum = 0;
+		sum = sum +1;
+		sum = sum +2;
+		sum = sum +3;
+		sum = sum +4;
+		sum = sum +5;
+		System.out.println("합:"+sum);
+		
+		// ↓ i=0 시작값(처음한번만 쓰고 안씀)(0부터 시작), i<=5 조건값(참일떄까지), i++ 증감식(조건이 참일때만 증감)
+		for(int i=0; i<=5; i++) {
+			System.out.println();
+		}
+	}
+}
+
+package p153;
+
+public class ForMultipleEx {
+	public static void main(String ar[]) {
+		for(int i=2; i<=9; i++) {//조건값 i<3 도 가능 
+			System.out.println("=== " + i + "단 ===");//바깥 for, 천천히 돌고
+		for(int j=1; j<=9; j++) { //안쪽 for, 빠르게 돌고
+			System.out.println(i + " x " + j + " = " + (i*j));
+			}
+		System.out.println();
+		}
+	}
+}
+
+package p154;
+
+public class WhilePrintEx {
+	public static void main(String ar[]) {
+		
+		int i=1;
+		
+//		while(i<=5) {
+//			System.out.println("while()");
+//			i++;
+//		}
+	
+		do {
+			System.out.println("do~while() 은 거짓이라도 한번은 실행된다.");
+			i++;
+		}while(i<=3);
+	}
+}
+
+package p157;
+
+public class BreakEx {
+	public static void main(String ar[]) {
+		while(true) {
+			int num=(int)(Math.random()*6)+1;
+			System.out.println("출력숫자 :"+num);
+			if(num==6) {
+				break;
+			}
+		}
+		System.out.println("프로그램 종료!!");
+	}
+}
+
+package p159;
+
+public class ContinueEx {
+	public static void main(String ar[]) {
+		for(int i=1; i<=10; i++) {
+			if(i%2 !=0) {
+				continue;
+			}
+			System.out.println(i);
+		}
+	}
+}
+
+package p161;
+
+public class 연습문제5번 {
+	public static void main(String ar[]) {
+		for (int i=1; i<=4; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+				if(i==j) {
+				System.out.println();
+			}
+			
+		}
+	}
+		
+	}
+}
